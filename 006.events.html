@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+</head>
+<body>
+
+<button onclick="myFunction()">Click Here</button>
+
+<button onclick="document.getElementById('div').innerHTML = Date()">This time</button>
+
+<button onclick="this.innerHTML=Date()">Changable</button>
+
+<div id="div"></div>
+
+<span onmouseover="this.style.color='red'">Mouse Over</span>
+
+<script type="text/javascript">
+	function myFunction() {
+		var myDiv = document.getElementById("div");
+		myDiv.innerHTML = Date();
+	}
+</script>
+
+</body>
+</html>

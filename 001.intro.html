@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction</title>
+</head>
+<body>
+	<p id="test">Hello World</p>
+	<button onclick="changeContent()">Click To Chane Content</button>
+	<button onclick="changeStyle()">Click To Chane Style</button>
+	<button onclick="hide()">Hide</button>
+	<button onclick="externalJS()">External JS</button>
+
+<script type="text/javascript">
+	var text= document.getElementById('test');
+
+	// Change HTML Content
+	function changeContent(){
+		text.innerHTML="Hello Javascript!";
+	}
+
+	// Change HTML Style
+	function changeStyle(){
+		text.style.fontSize="35px";
+	}
+
+	// Hide Or Show Element
+	function hide(){
+		text.style.display="none";
+	}
+</script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

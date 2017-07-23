@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope</title>
+</head>
+<body>
+<p id="local-scope"></p>
+<p id="global-scope"></p>
+<script type="text/javascript">
+
+// Local Scope
+myFunction() ;
+
+document.getElementById("local-scope").innerHTML = "The type of car is " + typeof carName;
+function myFunction() {
+	var carName = "Volvoe";
+	// Automatically Global ,, assign a value to a variable which hasn`t been declared 
+	// carName = "Volvoe";
+}
+
+// Global Scope
+var carName1 = "Volvoe";
+myFunction1();
+function myFunction1() {
+	document.getElementById("global-scope").innerHTML = "The type of car is " + typeof carName1;
+}
+
+
+</script>
+</body>
+</html>
