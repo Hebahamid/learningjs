@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings</title>
+</head>
+<body>
+	<div id="demo"></div>
+	<br>
+	<div id="demo1"></div>
+	<div id="demo2"></div>
+	<p id="test"></p>
+	<p id="test1"></p>
+<script type="text/javascript">
+	var txt = "Please locate where 'locate' occurs!";
+	document.getElementById("demo").innerHTML = "Length is: " + txt.length +" index is: " + txt.indexOf("locate") + " Last index " +txt.lastIndexOf("locate");
+
+	document.getElementById("demo1").innerHTML= "Slice: " + txt.slice(7,18) + " + substring: " + txt.substring(4,18);
+	document.getElementById("demo2").innerHTML = txt.replace("Please", "Kindly");
+
+	// Concat Method
+	var txt1 = "Hello",
+		txt2 = "World!",
+		txt3 = txt1.concat(" " + txt2);
+	document.getElementById("test").innerHTML = "Concatenation: " + txt3;
+
+	// Split
+	var str = "Hello",
+		arr = str.split(""),
+		text = " ",
+		i;
+		
+		for (i = 0; i < arr.length; i++){
+			text += arr[i] + "<br>"
+		}
+		document.getElementById("test1").innerHTML = text;
+
+</script>
+</body>
+</html>

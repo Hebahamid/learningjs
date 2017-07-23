@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dates</title>
+</head>
+<body>
+<div id="demo"></div>
+<div id="demo2"></div>
+<script type="text/javascript">
+	
+	// document.getElementById("demo").innerHTML = new Date("November 13 1988 20:15:03");
+	//document.getElementById("demo").innerHTML = d.toString();
+
+
+	// converts a date to a UTC string 
+	//document.getElementById("demo").innerHTML = d.toUTCString();
+	//document.getElementById("demo").innerHTML = d.toDateString();
+
+
+	// Date Format
+	/*  long format
+		Short format
+		full format
+		Iso format
+	 */
+	 //document.getElementById("demo").innerHTML = new Date("10/05/2005");
+	 var d = new Date();
+	 // d.setFullYear(2020, 0, 14);
+	 // document.getElementById("demo").innerHTML =d;
+
+
+	 // Returns the number of milliseconds between the date and January 1, 1970
+	 var msec = Date.parse("March 21,2015");
+	 var d = new Date(msec); // convert milliseconds to Date
+	 document.getElementById("demo").innerHTML =d;
+
+
+	 // Compare Dates
+	 var today,someday,text;
+	 today = new Date();
+	 someday = new Date();
+	 someday.setFullYear(2200,05,23);
+	 if (today > someday) {
+	 	text="After Date";
+	 } else{
+	 	text="Before Date";
+	 }
+	 document.getElementById("demo2").innerHTML = text;
+
+</script>
+</body>
+</html>
