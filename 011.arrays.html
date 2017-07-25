@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+<div id="demo"></div>
+<div id="test"></div>
+<div id="test1"></div>
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()"">Sort Numerically</button>
+<div id="sorting"></div>
+
+<script type="text/javascript">
+
+	var car = ["Volvo" , "BWM" , "Saab"];
+	document.getElementById("test").innerHTML = car; // access Full Array
+	car.pop(); //remove last element
+	document.getElementById("test").innerHTML = car;
+	car.push("Mango"); //add Mango
+	document.getElementById("test").innerHTML = car.join(" * ");
+	//document.getElementById("demo").innerHTML = car[1]; // access an element
+	car.shift(); // remove the first element
+	document.getElementById("test").innerHTML = car.join(" * ");
+	car.unshift("Volv");
+	document.getElementById("test").innerHTML = car;
+
+	// Looping array
+	var fruits,text,i;
+	fruits = ["banana","orange","apple","mango"];
+	text = "<ul>";
+	for (i = 0; i < fruits.length; i++) {
+		text += "<li>" + fruits[i] + "</li>";
+	}
+	document.getElementById("demo").innerHTML = text + " Is it an array: " + Array.isArray(fruits);
+
+
+	// Sort a number
+	var numb= [10,13,8,5,17,30,20];
+	//numb.sort(function(a,b){return a-b});
+	numb.sort(function(a,b){return b-a});
+	document.getElementById("test1").innerHTML = numb;
+
+
+	// Example
+	var points=[40, 100, 1, 5, 25, 10];
+	document.getElementById("sorting").innerHTML = points;
+	function myFunction1() {
+		points.sort();
+    	document.getElementById("sorting").innerHTML = points;
+	}
+
+	function myFunction2() {
+		points.sort(function(a,b){return a-b});
+    	document.getElementById("sorting").innerHTML = points;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boolean &amp; Comparison</title>
+</head>
+<body>
+<!-- yes/no .. true/false .. on/off -->
+<!-- Everything Without a "Real" Value is False -->
+<!-- As: Zero / minus zero / empty string / undefined / null / NAN returns False -->
+<button onclick="myFunction()">Try It</button>
+
+<div id="demo"></div>
+Enter your age : <input id="age"/>
+<button onclick="compareAge()">Age</button>
+<div id="demo1"></div>
+
+<script type="text/javascript">
+	function myFunction() {
+		var x=-1;
+		document.getElementById("demo").innerHTML = Boolean(x);
+	}
+
+
+	// Comparison:
+	/*  x==y (equal in values)
+	  x===y (equal in value&type)
+	  x!=y (not equal in values)
+	  x!==y (not equal in value or type)
+	  x > y (greater)
+	  x < y (less)
+	 x >= y greater than or equal to
+	 x <= y less than or equal to
+	 x && y (x < 10 && y > 1) 
+	 x || y (x == 5 || y == 5) 
+	 !(x == y)  */
+
+	 // Example
+	 // function compareAge(){
+	 // 	var age,voteable;
+	 // 	age = document.getElementById("age").value;
+	 // 	voteable = (age<18) ? "Too young ":"Old Enough ";
+	 // 	document.getElementById("demo1").innerHTML = voteable + "to vote";
+
+	 // }
+	 function compareAge(){
+	 	var age,voteable;
+	 	age= Number(document.getElementById("age").value);
+	 	if (isNaN(age)) {
+	 		voteable="Input is not a number";
+	 	} else{
+	 		voteable = (age<18) ? "Too young" : "Old Enough" ;
+	 	}
+	 	document.getElementById("demo1").innerHTML = voteable;
+	 }
+
+</script>
+</body>
+</html>
