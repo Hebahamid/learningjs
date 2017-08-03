@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom 1</title>
+</head>
+<body>
+<input type="number" name="" id="inputt">
+<button id="try" onclick="myFunction()">Submit</button>
+<div id="test"></div>
+	<script>
+		
+		function myFunction(){
+			var x , result;
+			x = document.getElementById("inputt").value;
+			if (x < 0 || x > 100) {
+				result = "Please enter a number between 0 & 100"
+			} 
+			else if (x%2 == 0) {
+				if ( x > 20 ) { result = "Even not Weird";}
+				else if(x > 2 && x < 5){ result = "Even not Weird"; }
+				else {result = "Even Weird" }
+			}
+			else {
+				result = "Odd Weird";
+			}
+			document.getElementById("test").innerHTML = result;
+		}
+		</script>
+		
+
+	</script>
+</body>
+</html>
